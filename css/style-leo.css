@@ -183,7 +183,7 @@ a{
 .angle-left{
     position: absolute;
     left: 0;
-    width:  150px;
+    width:  142px;
     z-index: -1;
 }
 
@@ -192,9 +192,10 @@ a{
        margin: auto;
        margin-top: 20px;
        max-width: 100px;
-        transition: all 1s ease;
+        
        }
 .icons:hover{
+transition: all 1s ease;                 
      transform:rotateY(360deg);        
              }
 
@@ -229,30 +230,28 @@ a{
 }
 
 .sbar-1{
-    background: #16330b;
     width: 41%;
-    height: 50px;         
+    height: 50px; 
+    margin-left: 20px; 
+      
 }
 
 .sbar-1 p{
-    margin-top:  10px;
     font-size: 15px;
+
 }
 
-.sbar-2{
-    background: rgba(22, 51, 11, 0.53);
-    width: 59%;
-    height: 50px; 
-    right: 0;
-}
+
 .suscribe-tag{
     display: inline-grid;              
 }
 
 .grow-s{
-    width:41%;
-    height: 100%;
-    margin-bottom:  10px;
+position: absolute; 
+z-index: -1; 
+width: 140%;
+
+
 }
 
 .form{
@@ -270,6 +269,7 @@ a{
 
 .buttons{
          width:180px;
+         margin-top: 10px;
          padding-bottom: 15px;
          transition: all 0.5s ease;
 }
@@ -277,6 +277,23 @@ a{
 .buttons:hover{
          transform: scale(1.2);
 }
+
+
+.input-field{    
+    background: #fff;
+    height: 42px;
+    border-bottom:  0;
+    color:black;
+    margin-bottom: 20px;
+}
+
+.input-field label{    
+    display: flex;
+    justify-content: space-around;
+    padding-right: 10px; 
+     
+}
+
 
 /*ANIMACIONES*/
 
@@ -308,6 +325,20 @@ a{
     margin-top: 50px;
     font-size: 15px;
     }
+    .sbar-1 p{
+        margin-top:  10px;
+        font-size: 30px;
+    }
+
+    .input-field{ 
+    height: 45px;
+}
+
+.form{
+    margin-top: 30px; 
+
+
+      }
 
 }
 
@@ -327,17 +358,14 @@ a{
 
     }
 
-    .sbar-1 p{
-        margin-top:  20px;
-        font-size: 30px;
-    }
+
 
     .sbar-2{
         height: 80px; 
     }
 
     .grow-s{
-        margin: -0.1px;
+        width: 101%;
     }
 
 
