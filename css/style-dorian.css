@@ -1,0 +1,642 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #365c24;
+}
+
+.section{
+    padding: 25px 0;
+}
+
+/***************** NAVBAR *************************/
+
+.navbar{
+    background: linear-gradient(to left, #000 66%, #16330b 81%);
+    line-height: 1.5; /*overrides materialize nav line-height*/
+    border-bottom: 5px solid #fa6712;
+    height: 85px; /*overrides materialize nav height (64px) */
+}
+
+.nav-wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+
+.button-collapse i{
+    line-height: 1 !important; /*overrides materialize collapsable line height */
+    font-size: 33px !important;
+    padding-top: 25px;
+}
+
+.button-collapse i:hover{
+    color: #fa6712;
+    transition: 0.4s;
+}
+
+.button-collapse i:not(:hover){
+    color: white;
+    transition: 0.4s;
+}
+
+.side-nav img{
+    display: block;
+    width: 250px;
+    margin: 15px auto;
+}
+
+.nav-logo{
+    margin-top: 10px;
+    margin-left: 30px;
+}
+
+.nav-logo>img{ /** complete img logo **/
+    width: 150px;
+    height: 58px;
+}
+
+.nav-logo img:nth-child(2){ /** small img logo **/
+    display: none;
+}
+
+.page-links{
+    overflow: hidden; /** helps inspection with CDT **/
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+}
+
+.page-links li{
+    padding-bottom: 15px;
+}
+
+.page-links a{
+    font-weight: 600;
+    font-size: 1.04em;
+    padding: 0 22.5px;
+}
+
+.navbar .page-links a:hover{
+    background: none; /*overrides materialize effect*/
+    color: #f96611;
+    transition: 0.4s;
+}
+
+.navbar .page-links a:not(:hover){
+    color: white;
+    transition: 0.4s;
+}
+
+.media-links{
+    display: flex;
+    align-items: center;
+    margin-right: 25px;
+}
+
+.media-links a{
+    padding: 0 2.5px;
+}
+
+.media-links img{
+    width: 25px;
+}
+
+/***************** HEADER *************************/
+
+.header-img{
+    background: url('../img/home-img.jpg') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    height: 530px;
+    position: relative; /** anchor **/
+}
+
+.header-content{ /** slogan container **/
+    position: absolute;
+    top: 100px;
+    left: 45px;
+}
+
+.header-content .slogan{
+    width: auto; /*45% 536px*/
+    color: white;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 3.5em;
+    text-shadow: -2px 5px 20px #000;
+}
+
+.header-content .slogan-2{
+    background: white;
+    display: inline-block; /** limits the size of the background **/
+    color: #425e34;
+    font-weight: 700;
+    font-family: sans-serif;
+    font-size: 1.2em;
+    padding: 0 5px; /** responsive feature **/
+    margin-top: 15px;
+}
+
+
+/**************** HEADER GREEN BARS *********************/
+
+.header-bar{
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+    height: auto;
+    width: 100%;
+}
+
+.header-bar p{
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 5;
+    width: 600px;
+    height: 80px;
+    
+    text-transform: uppercase;
+    color: white;
+    font-size: 35px;
+    
+    /** Positioning **/
+    display: flex;
+    align-items: center;
+    padding-left: 90px;
+   
+}
+
+@keyframes bounce{
+	0%{
+		padding-bottom: 25px;
+    	padding-top: 35px;
+    	color: #54694c;
+	}
+	100%{
+		padding-bottom: 35px;
+    	padding-top: 25px;
+    	color: transparent;
+	}
+}
+
+.header-bar .icon-angle-down{
+    padding-top: 10px;
+    padding-right: 13px;
+    color: #54694c;
+    font-size: 34px;
+    animation: bounce 0.8s infinite alternate;
+}
+
+.hbar-1{
+    background: rgba(22, 51, 11, 0.53);
+    width: 100%;
+    height: 80px;   
+}
+
+.hbar-2{
+    background: #16330b;
+    width: 100%;
+    height: 40px;
+}
+
+.bar-angle{
+    width: 600px;
+    height: 167px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+/******** PRODUCTS ***********/
+
+.section.products{
+    width: 100%;
+    height: auto;
+    position: relative; /* anchor */
+    color: white;
+}
+
+.prod-angle{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100px;
+    height: 100%;
+    transform: skewX(10deg);
+    background: #16330b;
+    margin-left: -46px;
+}
+
+.products .col{
+    margin: 12.5px 0;
+    padding: 0 1.4rem; /* overrides materialize .col margin */
+}
+
+.prod-content{
+    overflow: hidden; /* fixes height from floated element */
+    margin-bottom: 15px;
+}
+
+.prod-content .prod-logo{
+    float: left;
+    width: 50px;
+    height: 50px;
+}
+
+.prod-logo:hover{
+     transform:rotateY(360deg); 
+     transition: all 1s ease;
+}
+
+.prod-content h2{
+    line-height: 1.2;
+    font-weight: 500;
+    /* positioning */
+    padding-left: 61px;
+    padding-top: 7px;
+    margin: 0;
+    font-size: 1.1em;
+    text-transform: uppercase;
+}
+
+.prod-content + p{
+    text-align: justify;
+    padding: 10px;
+    border: 1px solid #a6ada6;
+    font-size: 0.85em;
+}
+
+.prod-content .premezclas{
+    padding-top: 15px;
+}
+
+
+.prod-footer{
+    margin-bottom: 0; 
+}
+
+.prod-footer p{
+    font-size: 1.2em;
+    padding: 0 10px;
+}
+
+
+.contact-link{
+    display: inline-block;
+    width: 200px;
+    height: 100%;
+    margin-top: 6px;
+}
+
+.contact-link:hover{
+    width: 220px;
+    transition: 0.4s;
+}
+
+.contact-link:not(:hover){
+    width: 200px;
+    transition: 0.4s;
+}
+
+/****************** PARALLAX - 1 ACTUALIDAD *************************/
+
+.parallax-1{
+    background: url('../img/actualidad1.jpg') no-repeat center center; 
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative; /* Anchor */
+    height: 540px;
+}
+
+.parallax-1 .filter{
+    background: linear-gradient(to top, white, transparent);
+    height: 100%;
+}
+
+.angle-carousel{
+    position: absolute;
+    z-index: 105;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    font-size: 40px;
+}
+
+.icon-angle-right{
+    top: 0;
+    right: 0;
+    padding-right: 40px;
+}
+
+.icon-angle-left{
+    top: 0;
+    left: 0;
+    padding-left: 40px;
+}
+
+.icon-angle-right:hover, .icon-angle-left:hover{
+    cursor: pointer;
+    color: #FF7500;
+    transition: 0.4s;
+}
+
+.icon-angle-right:not(:hover), .icon-angle-left:not(:hover){
+    color: white;
+    transition: 0.4s;
+}
+
+.carousel.carousel-slider{
+    padding: 0;
+    height: 100% !important; /*overrides material carousel-slider height*/
+}
+
+.parallax-1  .sub-h2{
+    color: white;
+    text-shadow: 2.5px 2.5px #252525;
+}
+
+.carousel .container{
+    position: relative; /*anchor*/
+    height: 100%; /* helps the inspection with CDT */
+    color: black;
+}
+
+.carousel .container .row{
+    position: absolute;
+    top: 105px;
+    display: flex;
+    justify-content: center;
+}
+
+.carousel .col{
+    margin-left: 0 !important; /*overrides materialize margin*/
+}
+
+.img-border{
+    display: inline-block;
+    width: 125px;
+    height: 125px;
+    border: 5px solid white;
+}
+
+.carousel #img1{
+    background: url('../img/muestra1.jpg') no-repeat center center;
+    background-size: 125px 125px;
+}
+
+.carousel #img2{
+    background: url('../img/muestra3.png') no-repeat 50% 50%;
+    background-size: 125px 125px;
+}
+
+.carousel #img3{
+    background: url('../img/muestra3.jpg') no-repeat center center;
+    background-size: 125px 125px;
+}
+
+.carousel #img4{
+    background: url('../img/muestra4.jpg') no-repeat center center;
+    background-size: 125px 125px;
+}
+
+.carousel-item h3{
+    font-weight: 700;
+    font-size: 40px;
+    margin: 15px 0;
+    text-transform: uppercase;
+    text-shadow: 2px 2px gray;
+}
+
+.carousel-item p{
+    font-weight: 600;
+    font-size: 17px !important;
+    text-align: justify;
+
+}
+
+.carousel .button-link{
+    color: #fa6712;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 20px;
+    font-weight: 900;
+    font-size: 18px;
+    
+}
+
+.carousel .button-link:not(:hover){
+    color: #fa6712;
+    transition: 0.4s;
+}
+
+.carousel .button-link:hover{
+    color: #d4570e;
+    transition: 0.4s;
+}
+
+
+/******************* MATERIALIZE CHECKPOINTS *************************/
+
+/**
+>1200px
+>992px
+>750px
+>600px
+>450px
+>360px
+**/
+
+
+/** extra large .col .xl **/
+@media only screen and (max-width: 1200px){
+    
+    /***** NAVBAR *****/
+    .page-links a{
+        padding: 0 15px;
+    }
+    
+    
+    /***** HEADER ****/
+    .header-content {
+        top: 75px;
+    }
+    
+    
+    /**** PARALLAX - ACTUALIDAD ****/
+    .parallax-1{
+        height: 580px;
+    }
+    
+    .carousel-item h3{
+        font-size: 33px;
+    }
+    
+}
+
+/** large .col .l **/
+@media only screen and (max-width: 992px){
+    
+    
+    /***** HEADER BARS ****/
+    .header-bar{
+        height: 100px;
+    }
+    
+    .bar-angle, .hbar-1, .hbar-2{
+        display: none;
+    }
+    
+    .header-bar p{
+        width: 100%;
+        height: 100%;
+        background: #16330b; /*rgba(22, 51, 11, 0.78);*/
+        padding: 0;
+        justify-content: center; /** has display: flex already applied for positioning **/
+    }
+    
+    
+    /****** PARALLAX - ACTUALIDAD *****/
+    .carousel-item h3{
+        font-size: 30px;
+    }
+    
+    
+    /****** PRODUCTS *****/
+    .prod-angle{
+        display: none;
+    }
+    
+}
+
+@media only screen and (max-width: 750px){
+    
+    /****** PARALLAX - ACTUALIDAD *****/
+     .carousel-item h3{
+        font-size: 25px;
+    }
+    
+    .carousel-item p{
+        font-size: 15px !important;
+    }
+}
+
+/** medium .col .m **/
+@media only screen and (max-width: 600px){
+    
+    /***** NAVBAR ****/
+
+    
+    /***** HEADER ****/
+    .header-content {
+        top: 95px;
+        left: 25px;
+    }
+    
+    .header-content .slogan{
+        font-size: 3em;
+    }
+    
+    .header-content .slogan-2{
+        font-size: 1em;
+    }
+    
+    
+    /****** PARALLAX - ACTUALIDAD *****/
+    
+    .angle-carousel{
+        font-size: 25px;
+    }
+    
+    .icon-angle-left, .icon-angle-right{
+        padding: 0 10px;
+    }
+    
+    .sub-h2{
+        font-size: 30px;
+    }
+    
+    .carousel-item h3{
+        font-size: 25px;
+    }
+    
+}
+
+@media only screen and (max-width: 450px){
+    
+    /***** NAVBAR *****/
+    .media-links img{
+        width: 22px;
+    }
+    
+    .button-collapse i{
+        font-size: 28px !important;
+    }
+    
+    .nav-logo>img{
+        display: none
+    }
+
+    .nav-logo img:nth-child(2){
+        display: block;
+        width: 40px;
+        height: 58px;
+        margin-left: -30px;
+    }
+    
+    .media-links {
+        margin-right: 10px;
+    }
+    
+    
+    /***** HEADER ****/
+    .header-content .slogan {
+        font-size: 2.3em;
+    }
+    
+    .header-content .slogan-2 {
+        font-size: 0.85em;
+    }
+    
+    
+    /***** PRODUCTS *****/
+    
+    .prod-footer p{
+        font-size: 1em;
+    }
+    
+    .icon-contact{
+        margin-top: 8px;
+    }
+}
+
+@media only screen and (max-width: 360px){
+    
+    
+    /***** NAVBAR *****/
+    .media-links img {
+        width: 20px;
+    }
+    
+    /***** HEADER *****/
+    .header-content .slogan-2 {
+        font-size: 0.8em;
+        margin-right: 18px;
+    }
+    
+    
+    /***** HEADER BARS ****/
+    .header-bar p{
+        font-size: 25px;
+    }
+    
+    
+    
+    .header-bar .icon-angle-down{
+        font-size: 28px;
+    }
+}
