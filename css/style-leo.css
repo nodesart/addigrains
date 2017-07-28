@@ -222,11 +222,11 @@ transition: all 1s ease;
 }  
 
 
-/*SUSCRIBETE BARS*/
+/*SUSCRIBE*/
 
 .suscribete-bar{   
-    display: flex;
-   
+    position: absolute;
+   width: 100%;
 }
 
 .sbar-1{
@@ -253,22 +253,26 @@ width: 100%;
 }
 
 .form{
-    margin-top: 15px; 
+    margin-top: 10px; 
     display: flex;
     margin-bottom: 0;
     font-size: 20px;
-      }
+}
 
 .form .tablet{
-              width: 100%;
-              height:100%;
-              padding: 0 0 0 0;
-      }
+    width: 30%;
+    height:30%;
+    padding: 0 0 0 0;
+    margin-top: 7%;
+}
+
+form{
+     margin-top: 110px;
+     }
 
 .buttons{
          width:180px;
-         margin-top: 10px;
-         padding-bottom: 15px;
+         margin-top: 10px;         
          transition: all 0.5s ease;
 }
 
@@ -276,11 +280,14 @@ width: 100%;
          transform: scale(1.2);
 }
 
+#left-suscribe{
+  margin-left: 5%;             
+               }
+
 
 .input-field{    
     background: url(../img/input.svg) space 0px 4px;
     background-size: cover;
-/*    background: #fff; */
     height: 42px;   
     width: inherit; 
     color:black;
@@ -326,6 +333,9 @@ input[type=text]:not(.browser-default){
 
 /** large .col .l **/
 @media only screen and (min-width: 993px){
+    
+    /*PRODUCTOS*/
+
     .productos ul li{
     flex-direction: column;
     }
@@ -333,6 +343,8 @@ input[type=text]:not(.browser-default){
     margin-top: 50px;
     font-size: 15px;
     }
+
+    /*SUSCRIBE*/
 
     .sbar-1{
         background: transparent;
@@ -346,32 +358,29 @@ input[type=text]:not(.browser-default){
 
     .input-field{ 
     height: 45px;
-}
+    }
 
-.form{
+    .form{
     margin-top: 30px; 
+    }
 
+    #left-suscribe{
+  margin-left: 20%;             
+               }
 
-      }
+    form{
+    margin-top: auto;
+         }
 
 }
 
 /** large .col .m **/
 @media only screen and (min-width: 601px){
 
-.hbar-2 p{
-    margin-top:  30px;
-    font-size: 30px;
-}
-
-
-/*SUSCRIBETE BARS*/
-
-
-
-
-
-  
+    .hbar-2 p{
+        margin-top:  30px;
+        font-size: 30px;
+    }
 
 
 }
