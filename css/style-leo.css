@@ -358,6 +358,7 @@ input[type=text]:not(.browser-default){
 
     .input-field{ 
     height: 45px;
+    margin-right: 10px;
     }
 
     .form{
