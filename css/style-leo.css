@@ -249,7 +249,7 @@ transition: all 1s ease;
 .grow-s{
 position: absolute; 
 z-index: -1; 
-width: 140%;
+width: 100%;
 
 
 }
