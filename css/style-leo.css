@@ -229,10 +229,6 @@ transition: all 1s ease;
    width: 100%;
 }
 
-#s-barx{
-    height: 100px;
-}
-
 .sbar-1{
     width: 100%;
     height: 100px; 
@@ -252,7 +248,8 @@ transition: all 1s ease;
 .grow-s{
 position: absolute; 
 z-index: -1; 
-width: 100%;
+width: 440px;
+
 
 }
 
@@ -352,13 +349,22 @@ input[type=text]:not(.browser-default){
 
     .sbar-1{
         background: transparent;
-        width: 41%;
+        width: 440px;
     }
 
     .sbar-1 p{
         margin-top:  5px;
         font-size: 30px;
     }
+
+    .sbar-2{
+        position: absolute;
+        top:0;
+        background: #1F3F12;
+        width: 100%;
+        height: 35px;
+        z-index: -2;
+    }    
 
     .input-field{ 
     height: 45px;
@@ -373,9 +379,9 @@ input[type=text]:not(.browser-default){
   margin-left: 20%;             
                }
 
-    form{
+/*    form{
     margin-top: auto;
-         }
+         }*/
 
 }
 
