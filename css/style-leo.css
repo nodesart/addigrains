@@ -229,6 +229,10 @@ transition: all 1s ease;
    width: 100%;
 }
 
+#s-barx{
+    height: 100px;
+}
+
 .sbar-1{
     width: 100%;
     height: 100px; 
